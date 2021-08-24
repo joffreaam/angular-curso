@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Personaje } from '../interfaces/dbz.interface';
+import { Dbzservice } from '../services/dbz.service';
 
 @Component({
   selector: 'app-main-page',
@@ -8,20 +9,20 @@ import { Personaje } from '../interfaces/dbz.interface';
 
 export class MainPageComponent {
 
-  personajes: Personaje[] = [{
-    nombre: 'Goku',
-    poder: 15000
-    },
-    {
-      nombre: 'Vegeta',
-      poder: 75800
-    }
-  ];
-
   nuevo: Personaje = {
       nombre: 'maestro Roshi',
       poder: 1000
   }
-  
+
+  /* get personajes(): Personaje[]{
+    return this.dbzService.personajes;
+  } 
+
+  agregarNuevoPersonaje( argumento: Personaje) {
+    this.personajes.push( argumento );  
+  }*/
+
+  constructor(){}
 
 }
+
